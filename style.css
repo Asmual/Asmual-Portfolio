@@ -1,3 +1,22 @@
-.AS{
-  color: blue;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.font-open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+ 
+}
+header{
+  background-color: #ffb885; 
+}
+
+.Button1{
+  background-color: #f76c6c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
