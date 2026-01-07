@@ -43,6 +43,9 @@ nav .menu a{
   color: #474747;
   text-decoration: none;
 } 
+nav .menu a:hover{
+  color: #f76c6c;
+}
 
 .Logo h2{
   font-size: 45px;
@@ -63,6 +66,10 @@ nav .menu a{
   font-weight: bold;
   cursor: pointer;
 }
+.btn:hover {
+  background-color: rgb(194, 102, 34);
+}
+
 
 #banner{
   margin: 47px 38px 0px 230px;
@@ -85,7 +92,7 @@ nav .menu a{
 }
 
 #banner .banner-content h1{
-  font-size: 45px;
+  font-size: 35px;
   font-weight: bold;
   color: #181818;
   margin-bottom: 20px;
