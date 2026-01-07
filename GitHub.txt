@@ -1,6 +1,6 @@
 git init
 git add .
-git commit -m "first commit"
+git commit -m "after 30min"
 git branch -M main
 git remote add origin https://github.com/Asmual/Asmual-Portfolio.git
 git push -u origin main

@@ -6,17 +6,44 @@
 .font-open-sans {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
- 
 }
+/* This is the main styling for the header */
+
 header{
   background-color: #ffb885; 
+  padding-top: 50px;
+}
+nav{
+  width: 70%;
+  max-width: 1140px;
+  border: solid red 1.5px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+nav .menu{
+  display: flex;
+  list-style-type: none;
+  gap: 51px;
+
+}
+nav .menu a{
+  font-size: 20px;
+  color: #474747;
+  text-decoration: none;
+
+
+} 
+.Logo h2{
+  font-size: 45px;
+  font-weight: 900;
+
+.Color-Orange{
+  color: #f76c6c;
 }
 
-.Button1{
+.btn{
   background-color: #f76c6c;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
 }
