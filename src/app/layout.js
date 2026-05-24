@@ -22,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
         <Toaster
           position="top-right"
           toastOptions={{
@@ -36,10 +36,9 @@ export default function RootLayout({ children }) {
         />
 
         <Navbar />
-
         <main className="pt-16">{children}</main>
-
         <Footer />
+        
       </body>
     </html>
   );
