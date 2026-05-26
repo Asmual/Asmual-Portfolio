@@ -47,7 +47,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-[80vh] bg-[#0e0e0e] text-gray-200 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-[80vh] bg-[#0e0e0e] text-gray-200 py-2 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-10">

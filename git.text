@@ -5,3 +5,12 @@ git commit -m "Update Hero Section"
 git branch -M main
 git remote add origin https://github.com/Asmual/Asmual-Next.js-Portfolio
 git push -u origin main
+
+
+
+
+
+
+git add .
+git commit -m "Update Hero Section"
+git branch -M main 
