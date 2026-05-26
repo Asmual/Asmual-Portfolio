@@ -53,8 +53,8 @@ export default function SignupPage() {
     }
 
     if (data?.user) {
-      toast.success("Account created successfully!", { id: toastId });
-      router.push("/dashboard");
+      toast.success("Account created successfully! Please log in.", { id: toastId });
+      router.push("/login");
     }
   };
 
@@ -62,7 +62,7 @@ export default function SignupPage() {
     setGoogleLoading(true);
     await authClient.signIn.social({
       provider: "google",
-      callbackURL: "/dashboard",
+      callbackURL: "/login",
     });
   };
 

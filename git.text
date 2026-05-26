@@ -1,7 +1,7 @@
 echo "# PlantoPedia-Website" >>
 git init
 git add .
-git commit -m "All Pages Design Done"
+git commit -m "Update Hero Section"
 git branch -M main
 git remote add origin https://github.com/Asmual/Asmual-Next.js-Portfolio
 git push -u origin main

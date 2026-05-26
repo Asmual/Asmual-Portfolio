@@ -105,7 +105,7 @@ export default function About() {
               <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-2xl overflow-hidden border-2 border-[#c9a84c]/30">
                 <div className="absolute inset-0 bg-linear-to-t from-[#0e0e0e]/50 via-transparent to-transparent z-10" />
                 <Image
-                  src="/images/Asmual Formal Look.PNG"
+                  src="/images/Asmual-HeroPicture.png"
                   alt="Asmual"
                   fill
                   sizes="(max-width: 768px) 256px, 288px"

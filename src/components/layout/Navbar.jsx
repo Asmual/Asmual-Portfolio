@@ -13,6 +13,7 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "Projects", href: "/projects" },
   { label: "Blogs", href: "/blogs" },
   { label: "Contact", href: "/contact" },
 ];
@@ -67,7 +68,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3">
             <div className="relative w-9 h-9">
               <Image
-                src="/images/Asmual-logo.png"
+                src="/images/AsmualLogo.png"
                 alt="Asmual Logo"
                 fill
                 sizes="36px"
