@@ -74,17 +74,7 @@ export default function Contact() {
               </h2>
 
               <div className="flex flex-col gap-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#c9a84c]/10 flex items-center justify-center text-[#c9a84c] shrink-0">
-                    <FaMapMarkerAlt className="text-lg" />
-                  </div>
-                  <div>
-                    <h3 className="text-white text-sm font-semibold">Our Location</h3>
-                    <p className="text-gray-400 text-xs mt-0.5 leading-relaxed">
-                      Dhaka, Bangladesh
-                    </p>
-                  </div>
-                </div>
+                
 
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-lg bg-[#c9a84c]/10 flex items-center justify-center text-[#c9a84c] shrink-0">
@@ -111,8 +101,19 @@ export default function Contact() {
                       href="tel:+880"
                       className="text-gray-400 hover:text-[#c9a84c] text-xs mt-0.5 block transition-colors"
                     >
-                      +880 (Available)
+                      +8801833452232
                     </a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-[#c9a84c]/10 flex items-center justify-center text-[#c9a84c] shrink-0">
+                    <FaMapMarkerAlt className="text-lg" />
+                  </div>
+                  <div>
+                    <h3 className="text-white text-sm font-semibold">Our Location</h3>
+                    <p className="text-gray-400 text-xs mt-0.5 leading-relaxed">
+                      Cox&apos; Bazar, Bangladesh
+                    </p>
                   </div>
                 </div>
               </div>

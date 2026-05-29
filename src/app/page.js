@@ -12,16 +12,16 @@ export default function Home() {
         <Hero />
       </div>
 
-      <div id="services" className="scroll-mt-10">
-        <Services />
-      </div>
-
       <div id="projects" className="scroll-mt-20">
         <Projects />
       </div>
 
-      <div id="about" className="scroll-mt-20">
+       <div id="about" className="scroll-mt-20">
         <About />
+      </div>
+
+      <div id="services" className="scroll-mt-10">
+        <Services />
       </div>
 
       <div id="blogs" className="scroll-mt-20">

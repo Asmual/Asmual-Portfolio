@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import {
   FaFacebookF,
   FaInstagram,
@@ -12,18 +13,31 @@ const Footer = () => {
   return (
     <footer className="bg-[#0e0e0e] border-t border-[#c9a84c]/20 text-white shadow-[0_-4px_30px_rgba(201,168,76,0.03)]">
       <div className="max-w-7xl mx-auto px-6 pt-16 pb-6">
+        {/* Footer Navigation and Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-
+          {/* Brand Identity & Description */}
           <div>
-            <h2 className="text-3xl font-bold text-[#c9a84c] mb-4 font-serif">
-              Asmual
-            </h2>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="relative w-10 h-10">
+                <Image
+                  src="/images/AsmualLogo.png"
+                  alt="Asmual Logo"
+                  fill
+                  sizes="40px"
+                  className="object-contain"
+                />
+              </div>
+              <h2 className="text-3xl font-bold text-[#c9a84c] font-serif">
+                Asmual
+              </h2>
+            </div>
             <p className="text-gray-400 leading-7">
               Crafting modern, scalable and elegant digital experiences with
               clean code and premium design.
             </p>
           </div>
 
+          {/* Quick Navigation Links */}
           <div>
             <h3 className="text-[#c9a84c] text-lg font-semibold mb-5">
               Quick Links
@@ -36,6 +50,7 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Professional Services Offered */}
           <div>
             <h3 className="text-[#c9a84c] text-lg font-semibold mb-5">
               Services
@@ -48,11 +63,11 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Social Presence Section */}
           <div>
             <h3 className="text-[#c9a84c] text-lg font-semibold mb-5">
               Follow Me
             </h3>
-
             <div className="flex flex-wrap gap-3">
               {[FaFacebookF, FaInstagram, FaTwitter, FaGithub, FaYoutube, FaLinkedinIn].map(
                 (Icon, index) => (
@@ -69,6 +84,7 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Copyright and Attribution Bar */}
         <div className="border-t border-[#c9a84c]/10 mt-12 pt-6 flex flex-col md:flex-row justify-between text-gray-500 text-sm">
           <p>© 2026 Asmual. All Rights Reserved.</p>
           <p>Designed with precision & passion.</p>

@@ -10,9 +10,9 @@ import { useRouter, usePathname } from "next/navigation";
 
 const navLinks = [
   { label: "Home", href: "/#home", id: "home" },
-  { label: "Services", href: "/#services", id: "services" },
   { label: "Projects", href: "/#projects", id: "projects" },
   { label: "About", href: "/#about", id: "about" },
+  { label: "Services", href: "/#services", id: "services" },
   { label: "Blogs", href: "/#blogs", id: "blogs" }, 
   { label: "Contact", href: "/#contact", id: "contact" },
 ];

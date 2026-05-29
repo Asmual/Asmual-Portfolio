@@ -222,10 +222,10 @@ export default function About() {
               </h3>
 
               <p className="text-gray-400 text-sm leading-7 max-w-xl">
-                Passionate Full Stack Developer focused on creating modern,
-                responsive, and user-friendly web applications using
-                React, Next.js, Node.js, and MongoDB. I enjoy turning
-                creative ideas into elegant digital experiences.
+                My journey as a developer is fueled by curiosity and a drive to build tools that make a real impact. 
+                I specialize in the MERN stack, bridging the gap between complex backend logic and refined frontend aesthetics. 
+                I don&apos;t just write code; I architect experiences that are performant, accessible, and future-proof. 
+                Whether it&apos;s optimizing databases or crafting pixel-perfect UIs, I thrive on delivering excellence at every layer of the stack.
               </p>
             </div>
 

@@ -12,5 +12,5 @@ git push -u origin main
 
 
 git add .
-git commit -m "Update Hero Section"
-git branch -M main 
+git commit -m "Added Animation & Lenis for Smooth Scrolling"
+git branch -M main
