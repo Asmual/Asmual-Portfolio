@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 💼 Asmual Profolio — Full-Stack Developer Portfolio
 
-## Getting Started
+> A premium, dynamic, and pixel-perfect personal portfolio website built to showcase advanced web development projects, skills, and professional journey.
 
-First, run the development server:
+ <img width="1893" height="838" alt="image" src="https://github.com/user-attachments/assets/b44a59c1-f445-422c-bded-e946e9d7799d" />
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Live Site
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+🔗 https://github.com/Asmual/Asmual-Next.js-Portfolio
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+| Technology | Purpose |
+|---|---|
+| ⚡ Next.js 15 | Core Framework (App Router & SSR) |
+| 🎨 Tailwind CSS | Premium Dark-Themed Styling |
+| 🍃 MongoDB | Database Integration for Session & Submissions |
+| 📝 React Simple Typewriter | Dynamic Typography & Hero Animations |
+| 🖼️ Next/Image | Optimized Component Image Rendering |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Featured Projects Showcased
 
-## Deploy on Vercel
+### 1. 🩺 DocAppoint — Healthcare Scheduling Platform
+- **Core Tech:** Next.js 15, Express.js, BetterAuth, MongoDB, JWT
+- **Key Feature:** Multi-layer security, real-time consultation slot discoverability, and decoupled cross-domain HTTP-only cookie session management.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 2. 🛍️ SunCart — Summer Essentials Store
+- **Core Tech:** Next.js 15, BetterAuth, MongoDB, Tailwind CSS, DaisyUI
+- **Key Feature:** Full-stack eCommerce system featuring Google OAuth, protected details mapping, and interactive profile updates.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 3. 📸 Influencer Products — Gear Landing Page
+- **Core Tech:** HTML5, CSS3, Flexbox, CSS Grid
+- **Key Feature:** High-fidelity, pixel-perfect responsive layout optimized for creators showcasing premium digital gear.
+
+---
+
+## 🚀 Key Features of the Portfolio
+
+- **Premium Dark Aesthetic:** Structured with deep backgrounds and elegant gold/amber gradients (`#c9a84c`) for a luxury visual hierarchy.
+- **Dynamic Micro-Interactions:** Smooth hover scales, blur-filter decorative background ambient lights, and an integrated automated typewriting experience.
+- **Robust Card Architecture:** Clean grid distribution displaying descriptions, fluid tags, and dual active redirection links (GitHub + Live Demo).
+- **Responsive Architecture:** Universally scaled and optimized across mobile viewports, tablets, and ultra-wide desktop monitors.
+
+---
+
+## 👨‍💻 Author
+- 👤 Name: Asmual Obaidul Hoque  
+- 📧 Email: Asmual01@gmail.com
