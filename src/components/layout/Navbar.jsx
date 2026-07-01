@@ -11,9 +11,10 @@ import { useRouter, usePathname } from "next/navigation";
 const navLinks = [
   { label: "Home", href: "/#home", id: "home" },
   { label: "Projects", href: "/#projects", id: "projects" },
+  { label: "Skills", href: "/#skills", id: "skills" },
   { label: "About", href: "/#about", id: "about" },
   { label: "Services", href: "/#services", id: "services" },
-  { label: "Blogs", href: "/#blogs", id: "blogs" }, 
+  { label: "Blogs", href: "/#blogs", id: "blogs" },
   { label: "Contact", href: "/#contact", id: "contact" },
 ];
 
@@ -51,6 +52,7 @@ export default function Navbar() {
       });
     };
 
+    // Corrected the undefined event listener reference
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);
@@ -138,13 +140,13 @@ export default function Navbar() {
           {/* Desktop Navigation Menu with Smooth Sliding Underline */}
           <ul className="hidden md:flex items-center gap-6 relative">
             {navLinks.map((link) => {
-              const isLinkActive = link.id 
-                ? (pathname === "/" && activeSection === link.id) 
+              const isLinkActive = link.id
+                ? (pathname === "/" && activeSection === link.id)
                 : pathname === link.href;
 
               return (
-                <li 
-                  key={link.href} 
+                <li
+                  key={link.href}
                   ref={(el) => (linksRef.current[link.id || link.href] = el)}
                   className="relative pb-1"
                 >
@@ -161,7 +163,7 @@ export default function Navbar() {
             })}
 
             {/* The single global sliding underline layer */}
-            <span 
+            <span
               className="absolute bottom-0 h-0.5 bg-[#c9a84c] rounded-full transition-all duration-300 ease-in-out pointer-events-none"
               style={{
                 left: `${underlineStyle.left}px`,
@@ -266,15 +268,16 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div 
+      {/* Mobile Menu Container */}
+      <div
         ref={mobileMenuRef}
         className={`fixed top-0 right-0 h-screen w-[60%] sm:w-[50%] bg-[#111] border-l border-[#c9a84c]/20 shadow-2xl z-40 pt-20 px-6 transition-transform duration-300 ease-in-out md:hidden
           ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <ul className="flex flex-col">
           {navLinks.map((link) => {
-            const isLinkActive = link.id 
-              ? (pathname === "/" && activeSection === link.id) 
+            const isLinkActive = link.id
+              ? (pathname === "/" && activeSection === link.id)
               : pathname === link.href;
 
             return (
@@ -354,8 +357,9 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Backdrop for mobile menu overlay */}
       {menuOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-30 md:hidden"
           onClick={() => setMenuOpen(false)}
         />

@@ -1,36 +1,41 @@
 import Hero from "@/components/sections/Hero";
-import About from "@/app/about/page";      
-import Services from "@/app/(main)/services/page";
-import Projects from "@/app/(main)/projects/page"; 
-import Contact from "@/app/contact/page";         
+import About from "@/components/sections/About";      
+import Services from "@/components/sections/Services";
+import Projects from "@/components/sections/Projects"; 
+import Contact from "@/components/sections/Contact";         
 import Blogs from "@/components/sections/Blogs";
+import Skills from "@/components/sections/Skills";
 
 export default function Home() {
   return (
     <main className="bg-[#0e0e0e]">
-      <div id="home">
+      <section id="home">
         <Hero />
-      </div>
+      </section>
 
-      <div id="projects" className="scroll-mt-20">
+      <section id="projects" className="scroll-mt-20">
         <Projects />
-      </div>
+      </section>
 
-       <div id="about" className="scroll-mt-20">
+      <section id="skills" className="scroll-mt-20">
+        <Skills />
+      </section>
+
+       <section id="about" className="scroll-mt-20">
         <About />
-      </div>
+      </section>
 
-      <div id="services" className="scroll-mt-10">
+      <section id="services" className="scroll-mt-10">
         <Services />
-      </div>
+      </section>
 
-      <div id="blogs" className="scroll-mt-20">
+      <section id="blogs" className="scroll-mt-20">
         <Blogs />
-      </div>
+      </section>
 
-      <div id="contact" className="scroll-mt-20">
+      <section id="contact" className="scroll-mt-20">
         <Contact />
-      </div>
+      </section>
     </main>
   );
 }

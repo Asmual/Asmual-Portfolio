@@ -10,18 +10,8 @@ import {
   FaPalette,
   FaServer,
 } from "react-icons/fa";
-
 import { motion } from "framer-motion";
 import "animate.css";
-
-const skills = [
-  { name: "HTML & CSS", percent: 90 },
-  { name: "JavaScript", percent: 85 },
-  { name: "React & Next.js", percent: 80 },
-  { name: "Node.js", percent: 75 },
-  { name: "MongoDB", percent: 70 },
-  { name: "Tailwind CSS", percent: 90 },
-];
 
 const services = [
   {
@@ -46,34 +36,6 @@ const services = [
   },
 ];
 
-function SkillBar({ name, percent }) {
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setWidth(percent), 300);
-    return () => clearTimeout(timer);
-  }, [percent]);
-
-  return (
-    <div className="flex flex-col gap-1.5 animate__animated animate__fadeInUp">
-      <div className="flex justify-between items-center">
-        <span className="text-gray-300 text-sm">{name}</span>
-
-        <span className="text-[#c9a84c] text-sm font-medium">
-          {percent}%
-        </span>
-      </div>
-
-      <div className="w-full h-1.5 bg-[#222] rounded-full overflow-hidden">
-        <div
-          className="h-full bg-[#c9a84c] rounded-full transition-all duration-1000 ease-out"
-          style={{ width: `${width}%` }}
-        />
-      </div>
-    </div>
-  );
-}
-
 export default function About() {
   const [visible, setVisible] = useState(false);
 
@@ -82,25 +44,21 @@ export default function About() {
   }, []);
 
   return (
-    <section className="min-h-screen bg-[#0e0e0e] py-10 sm:py-6 lg:py-12 px-4 relative overflow-hidden">
+    <section id="about" className="min-h-screen bg-[#0e0e0e] py-10 sm:py-6 lg:py-12 px-4 relative overflow-hidden">
 
-      {/* BACKGROUND */}
+      {/* BACKGROUND ELEMENTS */}
       <div className="absolute top-20 right-10 w-72 h-72 rounded-full border border-[#c9a84c]/10 pointer-events-none animate__animated animate__pulse animate__infinite animate__slower" />
-
       <div className="absolute bottom-20 left-10 w-48 h-48 rounded-full border border-[#c9a84c]/10 pointer-events-none animate__animated animate__pulse animate__infinite animate__slower animate__delay-2s" />
 
       <div className="max-w-7xl mx-auto">
 
-        {/* TITLE */}
+        {/* TITLE SECTION */}
         <div className="flex flex-col items-center mb-10 sm:mb-14 animate__animated animate__fadeInDown">
-
           <div className="flex items-center gap-3 mb-3">
             <div className="w-10 h-px bg-[#c9a84c]" />
-
             <span className="text-[#c9a84c] text-sm font-medium tracking-widest uppercase">
               About Me
             </span>
-
             <div className="w-10 h-px bg-[#c9a84c]" />
           </div>
 
@@ -112,14 +70,12 @@ export default function About() {
           </h2>
         </div>
 
-        {/* TOP SECTION */}
+        {/* BIO & PHOTO SECTION */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-16 items-center mb-16 sm:mb-20">
 
-          {/* PHOTO */}
+          {/* PHOTO WITH MOTION EFFECTS */}
           <div className="flex justify-center">
-
             <div className="relative">
-
               {/* ROTATING CIRCLE */}
               <motion.div
                 animate={{ rotate: 360 }}
@@ -156,49 +112,25 @@ export default function About() {
                 className="absolute -inset-3 rounded-full border border-[#c9a84c]/25"
               />
 
-              {/* CORNER TOP */}
+              {/* CORNER ACCENTS */}
               <motion.div
-                animate={{
-                  x: [0, 3, 0],
-                  y: [0, -3, 0],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
+                animate={{ x: [0, 3, 0], y: [0, -3, 0] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -top-4 -right-4 w-8 h-8 border-t-2 border-r-2 border-[#c9a84c]"
               />
-
-              {/* CORNER BOTTOM */}
               <motion.div
-                animate={{
-                  x: [0, -3, 0],
-                  y: [0, 3, 0],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1,
-                }}
+                animate={{ x: [0, -3, 0], y: [0, 3, 0] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                 className="absolute -bottom-4 -left-4 w-8 h-8 border-b-2 border-l-2 border-[#c9a84c]"
               />
 
-              {/* FLOATING IMAGE */}
+              {/* FLOATING IMAGE LAYER */}
               <motion.div
-                animate={{
-                  y: [0, -10, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden border-2 border-[#c9a84c]/30 shadow-[0_0_40px_rgba(201,168,76,0.18)]"
               >
                 <div className="absolute inset-0 bg-linear-to-t from-[#0e0e0e]/50 via-transparent to-transparent z-10" />
-
                 <Image
                   src="/images/Asmual-About.png"
                   alt="Asmual"
@@ -210,9 +142,8 @@ export default function About() {
             </div>
           </div>
 
-          {/* BIO */}
+          {/* BIO DETAILS */}
           <div className="flex flex-col gap-6 animate__animated animate__fadeInRight animate__slow">
-
             <div>
               <h3
                 className="text-2xl font-bold text-white mb-4"
@@ -222,9 +153,9 @@ export default function About() {
               </h3>
 
               <p className="text-gray-400 text-sm leading-7 max-w-xl">
-                My journey as a developer is fueled by curiosity and a drive to build tools that make a real impact. 
-                I specialize in the MERN stack, bridging the gap between complex backend logic and refined frontend aesthetics. 
-                I don&apos;t just write code; I architect experiences that are performant, accessible, and future-proof. 
+                My journey as a developer is fueled by curiosity and a drive to build tools that make a real impact.
+                I specialize in the MERN stack, bridging the gap between complex backend logic and refined frontend aesthetics.
+                I don&apos;t just write code; I architect experiences that are performant, accessible, and future-proof.
                 Whether it&apos;s optimizing databases or crafting pixel-perfect UIs, I thrive on delivering excellence at every layer of the stack.
               </p>
             </div>
@@ -244,7 +175,6 @@ export default function About() {
                   <p className="text-gray-500 text-xs uppercase tracking-widest">
                     {item.label}
                   </p>
-
                   <p className="text-white text-sm font-medium mt-0.5 wrap-break-word">
                     {item.value}
                   </p>
@@ -252,7 +182,7 @@ export default function About() {
               ))}
             </div>
 
-            {/* BUTTON */}
+            {/* RESUME BUTTON */}
             <a
               href="/Asmual_Obaidul_Hoque -Resume.pdf"
               download
@@ -264,52 +194,14 @@ export default function About() {
           </div>
         </div>
 
-        {/* SKILLS */}
-        <div className="mb-16 sm:mb-20 animate__animated animate__fadeInUp animate__delay-1s">
-
-          <div className="flex flex-col items-center mb-10">
-
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-px bg-[#c9a84c]" />
-
-              <span className="text-[#c9a84c] text-sm font-medium tracking-widest uppercase">
-                My Skills
-              </span>
-
-              <div className="w-10 h-px bg-[#c9a84c]" />
-            </div>
-
-            <h3
-              className="text-2xl font-bold text-white"
-              style={{ fontFamily: "Georgia, serif" }}
-            >
-              What I Know
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto px-1 sm:px-4">
-            {skills.map((skill) => (
-              <SkillBar
-                key={skill.name}
-                name={skill.name}
-                percent={skill.percent}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* SERVICES */}
+        {/* SERVICES SECTION */}
         <div className="pb-6 animate__animated animate__fadeInUp animate__delay-1s">
-
           <div className="flex flex-col items-center mb-10">
-
             <div className="flex items-center gap-3 mb-3">
               <div className="w-10 h-px bg-[#c9a84c]" />
-
               <span className="text-[#c9a84c] text-sm font-medium tracking-widest uppercase">
                 Services
               </span>
-
               <div className="w-10 h-px bg-[#c9a84c]" />
             </div>
 
@@ -322,7 +214,6 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
             {services.map((service, index) => (
               <div
                 key={service.title}
@@ -347,6 +238,7 @@ export default function About() {
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );
