@@ -10,6 +10,16 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
+  // Configured social platform references matching the precise icons layout
+  const socials = [
+    { Icon: FaFacebookF, url: "https://www.facebook.com/Asmuals" },
+    { Icon: FaInstagram, url: "https://www.instagram.com/asmual_obaidul_hoque" },
+    { Icon: FaTwitter, url: "https://x.com/Asmual_123" },
+    { Icon: FaGithub, url: "https://github.com/Asmual" },
+    { Icon: FaYoutube, url: "https://www.youtube.com/@AsmualObaidulHoque" },
+    { Icon: FaLinkedinIn, url: "https://www.linkedin.com/in/asmual" },
+  ];
+
   return (
     <footer className="bg-[#0e0e0e] border-t border-[#c9a84c]/20 text-white shadow-[0_-4px_30px_rgba(201,168,76,0.03)]">
       <div className="max-w-7xl mx-auto px-6 pt-16 pb-6">
@@ -31,9 +41,10 @@ const Footer = () => {
                 Asmual
               </h2>
             </div>
+            {/* Updated profile focus descriptor */}
             <p className="text-gray-400 leading-7">
-              Crafting modern, scalable and elegant digital experiences with
-              clean code and premium design.
+              Specializing in professional web development, frontend architecture, 
+              and creating interactive digital solutions with scalable, modern technologies.
             </p>
           </div>
 
@@ -69,17 +80,17 @@ const Footer = () => {
               Follow Me
             </h3>
             <div className="flex flex-wrap gap-3">
-              {[FaFacebookF, FaInstagram, FaTwitter, FaGithub, FaYoutube, FaLinkedinIn].map(
-                (Icon, index) => (
-                  <a
-                    key={index}
-                    href="#"
-                    className="w-10 h-10 border border-[#c9a84c]/40 rounded-full flex items-center justify-center hover:bg-[#c9a84c] hover:text-black transition duration-300"
-                  >
-                    <Icon />
-                  </a>
-                )
-              )}
+              {socials.map(({ Icon, url }, index) => (
+                <a
+                  key={index}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 border border-[#c9a84c]/40 rounded-full flex items-center justify-center hover:bg-[#c9a84c] hover:text-black transition duration-300"
+                >
+                  <Icon />
+                </a>
+              ))}
             </div>
           </div>
         </div>
