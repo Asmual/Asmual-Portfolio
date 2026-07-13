@@ -132,7 +132,7 @@ export default function About() {
               >
                 <div className="absolute inset-0 bg-linear-to-t from-[#0e0e0e]/50 via-transparent to-transparent z-10" />
                 <Image
-                  src="/images/Asmual-About.png"
+                  src="/images/AsmualAboutMe.png"
                   alt="Asmual"
                   fill
                   sizes="(max-width: 768px) 256px, 288px"

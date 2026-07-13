@@ -3,7 +3,6 @@ import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
 import Projects from "@/components/sections/Projects"; 
 import Contact from "@/components/sections/Contact";         
-import Blogs from "@/components/sections/Blogs";
 import Skills from "@/components/sections/Skills";
 
 export default function Home() {
@@ -25,12 +24,8 @@ export default function Home() {
         <About />
       </section>
 
-      <section id="services" className="scroll-mt-10">
+      <section id="services" className="scroll-mt-20">
         <Services />
-      </section>
-
-      <section id="blogs" className="scroll-mt-20">
-        <Blogs />
       </section>
 
       <section id="contact" className="scroll-mt-20">

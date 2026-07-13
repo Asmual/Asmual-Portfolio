@@ -8,30 +8,28 @@ import { FaArrowDown } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
 export default function Hero() {
-  // State for entry animation visibility
   const [visible, setVisible] = useState(false);
 
-  // Trigger visibility after mount
   useEffect(() => {
     const timer = setTimeout(() => setVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <section className="relative min-h-screen lg:h-screen bg-[#0e0e0e] flex items-center justify-center overflow-hidden pt-2.5 lg:pt-0 pb-5 sm:pb-8 lg:pb-0">
+    <section className="relative min-h-screen lg:h-screen bg-[#0e0e0e] flex items-center justify-center overflow-hidden pt-24 sm:pt-28 lg:pt-0 pb-12 lg:pb-0">
       {/* Main Container Wrapper */}
       <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 relative h-full flex items-center">
-        
+       
         {/* Ambient background decorative circles */}
-        <div className="absolute inset-0 w-full h-full pointer-events-none">
-          <div className="absolute top-20 left-4 w-72 h-72 rounded-full border border-[#c9a84c]/10" />
-          <div className="absolute bottom-20 right-4 w-48 h-48 rounded-full border border-[#c9a84c]/10" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 rounded-full border border-[#c9a84c]/5" />
+        <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
+          <div className="absolute top-20 left-4 w-72 h-72 rounded-full border border-[#c9a84c]/10 hidden sm:block" />
+          <div className="absolute bottom-20 right-4 w-48 h-48 rounded-full border border-[#c9a84c]/10 hidden sm:block" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 sm:w-150 sm:h-150 rounded-full border border-[#c9a84c]/5" />
         </div>
 
         {/* Layout Grid for Hero Content */}
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center relative z-10 mt-2">
-          
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-12 items-center relative z-10 mt-2">
+         
           {/* Profile Introduction & Description */}
           <div
             className={`flex flex-col gap-5 sm:gap-6 transition-all duration-1000 transform
@@ -46,7 +44,7 @@ export default function Hero() {
             </div>
 
             {/* Main Animated Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-white leading-tight font-serif min-h-13.75 sm:min-h-auto">
+            <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-white leading-tight font-serif min-h-14 sm:min-h-auto">
               Hi,{" "}
               <span className="text-[#c9a84c] inline-block no-underline select-none">
                 <Typewriter
@@ -62,12 +60,12 @@ export default function Hero() {
 
             {/* Short Bio Paragraph */}
             <p className="text-gray-400 text-base sm:text-lg leading-relaxed max-w-lg">
-              I build scalable, high-performance web applications with a focus on user-centric design. 
+              I build scalable, high-performance web applications with a focus on user-centric design.
               Specializing in React, Next.js, and Node.js to transform complex ideas into intuitive digital solutions.
             </p>
 
-            {/* Personal Achievement Stats */}
-            <div className="flex gap-8 mt-1">
+            {/* Personal Achievement Stats Grid */}
+            <div className="grid grid-cols-2 gap-y-6 gap-x-4 sm:flex sm:gap-8 mt-2">
               <div>
                 <h3 className="text-2xl font-bold text-[#c9a84c] font-serif">
                   1+
@@ -77,7 +75,7 @@ export default function Hero() {
                 </p>
               </div>
 
-              <div className="w-px bg-[#c9a84c]/20" />
+              <div className="hidden sm:block w-px bg-[#c9a84c]/20" />
 
               <div>
                 <h3 className="text-2xl font-bold text-[#c9a84c] font-serif">
@@ -88,28 +86,28 @@ export default function Hero() {
                 </p>
               </div>
 
-              <div className="w-px bg-[#c9a84c]/20" />
+              <div className="hidden sm:block w-px bg-[#c9a84c]/20" />
 
-              <div>
-                <h3 className="text-2xl font-bold text-[#c9a84c] font-serif">
-                  {"Cox's Bazar, Bangladesh"}
+              <div className="col-span-2 sm:col-span-1">
+                <h3 className="text-xl sm:text-2xl font-bold text-[#c9a84c] font-serif truncate max-w-70 sm:max-w-none">
+                  Cox&apos;s Bazar, BD
                 </h3>
-                <p className="text-gray-500 text-xs mt-1">Location</p>
+                <p className="text-gray-500 text-xs mt-1 whitespace-nowrap">Location</p>
               </div>
             </div>
 
             {/* Call to Action Navigation Links */}
-            <div className="flex flex-wrap gap-4 mt-2">
+            <div className="flex flex-wrap gap-4 mt-4">
               <Link
                 href="/projects"
-                className="px-6 py-3 text-sm font-medium bg-[#c9a84c] text-[#111] rounded hover:bg-[#b8923e] transition-all duration-200"
+                className="px-6 py-3 text-sm font-medium bg-[#c9a84c] text-[#111] rounded hover:bg-[#b8923e] transition-all duration-200 text-center flex-1 sm:flex-none"
               >
                 View My Work
               </Link>
 
               <Link
                 href="/contact"
-                className="px-6 py-3 text-sm font-medium border border-[#c9a84c] text-[#c9a84c] rounded hover:bg-[#c9a84c]/10 transition-all duration-200"
+                className="px-6 py-3 text-sm font-medium border border-[#c9a84c] text-[#c9a84c] rounded hover:bg-[#c9a84c]/10 transition-all duration-200 text-center flex-1 sm:flex-none"
               >
                 Contact Me
               </Link>
@@ -118,7 +116,7 @@ export default function Hero() {
 
           {/* Visual Identity Section with Animations */}
           <div
-            className={`flex flex-col items-center pr-5 lg:items-end gap-5 sm:gap-6 transition-all duration-1000 delay-300 transform
+            className={`flex flex-col items-center lg:items-end gap-6 transition-all duration-1000 delay-300 transform mt-8 lg:mt-0
               ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
           >
             <div className="relative">
@@ -131,7 +129,7 @@ export default function Hero() {
                   repeat: Infinity,
                   ease: "linear",
                 }}
-                className="absolute -inset-5 rounded-full border border-[#c9a84c]/20 border-dashed"
+                className="absolute -inset-4 sm:-inset-5 rounded-full border border-[#c9a84c]/20 border-dashed pointer-events-none"
               />
 
               {/* Radial Background Glow */}
@@ -145,7 +143,7 @@ export default function Hero() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute -inset-3 rounded-full bg-[#c9a84c]/10 blur-2xl"
+                className="absolute -inset-2 sm:-inset-3 rounded-full bg-[#c9a84c]/10 blur-2xl pointer-events-none"
               />
 
               {/* Secondary Rotating Ring */}
@@ -156,11 +154,11 @@ export default function Hero() {
                   repeat: Infinity,
                   ease: "linear",
                 }}
-                className="absolute -inset-3 rounded-full border border-[#c9a84c]/30"
+                className="absolute -inset-2 sm:-inset-3 rounded-full border border-[#c9a84c]/30 pointer-events-none"
               />
 
               {/* Static Frame Ring */}
-              <div className="absolute -inset-1 rounded-full border border-[#c9a84c]/20" />
+              <div className="absolute -inset-1 rounded-full border border-[#c9a84c]/20 pointer-events-none" />
 
               {/* Animated corner top-right */}
               <motion.div
@@ -173,7 +171,7 @@ export default function Hero() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute -top-4 -right-4 w-8 h-8 border-t-2 border-r-2 border-[#c9a84c]"
+                className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-r-2 border-[#c9a84c] pointer-events-none"
               />
 
               {/* Animated corner bottom-left */}
@@ -188,7 +186,7 @@ export default function Hero() {
                   ease: "easeInOut",
                   delay: 1,
                 }}
-                className="absolute -bottom-4 -left-4 w-8 h-8 border-b-2 border-l-2 border-[#c9a84c]"
+                className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-l-2 border-[#c9a84c] pointer-events-none"
               />
 
               {/* Hero Profile Image Container */}
@@ -201,12 +199,12 @@ export default function Hero() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="relative w-44 h-56 sm:w-52 sm:h-68 lg:w-60 lg:h-76 rounded-2xl overflow-hidden border-2 border-[#c9a84c]/40 shadow-[0_0_35px_rgba(201,168,76,0.18)]"
+                className="relative w-40 h-52 sm:w-52 sm:h-68 lg:w-60 lg:h-76 rounded-2xl overflow-hidden border-2 border-[#c9a84c]/40 shadow-[0_0_35px_rgba(201,168,76,0.18)]"
               >
                 <div className="absolute inset-0 bg-linear-to-t from-[#0e0e0e]/60 via-transparent to-transparent z-10" />
 
                 <Image
-                  src="/images/Asmual-HeroPicture.png"
+                  src="/images/Asmua-lHeroPic.png"
                   alt="Asmual Obaidul Hoque"
                   fill
                   className="object-cover object-top"
@@ -219,7 +217,7 @@ export default function Hero() {
             <a
               href="/Asmual_Obaidul_Hoque -Resume.pdf"
               download="Asmual_Obaidul_Hoque_Resume.pdf"
-              className="group flex items-center gap-2 px-4 py-2.5 text-xs font-semibold tracking-wide uppercase border border-[#c9a84c]/40 text-[#c9a84c] rounded-xl bg-[#121316]/50 hover:bg-[#c9a84c] hover:text-[#0e0e0e] transition-all duration-300 shadow-[0_4px_15px_rgba(0,0,0,0.2)] hover:shadow-[0_0_15px_rgba(201,168,76,0.3)] w-48 sm:w-52 lg:w-60 justify-center whitespace-nowrap"
+              className="group flex items-center gap-2 px-4 py-2.5 text-xs font-semibold tracking-wide uppercase border border-[#c9a84c]/40 text-[#c9a84c] rounded-xl bg-[#121316]/50 hover:bg-[#c9a84c] hover:text-[#0e0e0e] transition-all duration-300 shadow-[0_4px_15px_rgba(0,0,0,0.2)] hover:shadow-[0_0_15px_rgba(201,168,76,0.3)] w-40 sm:w-52 lg:w-60 justify-center whitespace-nowrap mt-2"
             >
               <style>{`
                 @keyframes gentleBounce {

@@ -1,74 +1,74 @@
 "use client";
 import { motion } from "framer-motion";
-import { 
-  FaReact, 
-  FaJsSquare, 
-  FaHtml5, 
-  FaCss3Alt, 
-  FaNodeJs 
+import {
+  FaReact,
+  FaJsSquare,
+  FaHtml5,
+  FaCss3Alt,
+  FaNodeJs
 } from "react-icons/fa";
-import { 
-  SiTailwindcss, 
-  SiNextdotjs, 
-  SiExpress, 
-  SiMongodb 
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiExpress,
+  SiMongodb
 } from "react-icons/si";
 import "animate.css";
 
 const skillsData = [
-  { 
-    name: "React", 
-    percent: 95, 
-    subtitle: "Hooks, Context, Redux", 
-    icon: <FaReact className="text-[#c9a84c] text-2xl" /> 
+  {
+    name: "React",
+    percent: 95,
+    subtitle: "Hooks, Context, Redux",
+    icon: <FaReact className="text-[#c9a84c] text-2xl" />
   },
-  { 
-    name: "JavaScript", 
-    percent: 92, 
-    subtitle: "ES6+, Async/Await, DOM", 
-    icon: <FaJsSquare className="text-[#c9a84c] text-2xl" /> 
+  {
+    name: "JavaScript",
+    percent: 92,
+    subtitle: "ES6+, Async/Await, DOM",
+    icon: <FaJsSquare className="text-[#c9a84c] text-2xl" />
   },
-  { 
-    name: "HTML5", 
-    percent: 90, 
-    subtitle: "Semantic HTML, Accessibility", 
-    icon: <FaHtml5 className="text-[#c9a84c] text-2xl" /> 
+  {
+    name: "HTML5",
+    percent: 90,
+    subtitle: "Semantic HTML, Accessibility",
+    icon: <FaHtml5 className="text-[#c9a84c] text-2xl" />
   },
-  { 
-    name: "CSS3", 
-    percent: 88, 
-    subtitle: "Flexbox, Grid, Animations", 
-    icon: <FaCss3Alt className="text-[#c9a84c] text-2xl" /> 
+  {
+    name: "CSS3",
+    percent: 88,
+    subtitle: "Flexbox, Grid, Animations",
+    icon: <FaCss3Alt className="text-[#c9a84c] text-2xl" />
   },
-  { 
-    name: "Tailwind CSS", 
-    percent: 85, 
-    subtitle: "Utility-first CSS, Responsive Design", 
-    icon: <SiTailwindcss className="text-[#c9a84c] text-2xl" /> 
+  {
+    name: "Tailwind CSS",
+    percent: 85,
+    subtitle: "Utility-first CSS, Responsive Design",
+    icon: <SiTailwindcss className="text-[#c9a84c] text-2xl" />
   },
-  { 
-    name: "Next.js", 
-    percent: 80, 
-    subtitle: "SSR, SSG, App Router", 
-    icon: <SiNextdotjs className="text-[#c9a84c] text-2xl" /> 
+  {
+    name: "Next.js",
+    percent: 80,
+    subtitle: "SSR, SSG, App Router",
+    icon: <SiNextdotjs className="text-[#c9a84c] text-2xl" />
   },
-  { 
-    name: "Node.js", 
-    percent: 90, 
-    subtitle: "Express, REST APIs, Middleware", 
-    icon: <FaNodeJs className="text-[#c9a84c] text-2xl" /> 
+  {
+    name: "Node.js",
+    percent: 90,
+    subtitle: "Express, REST APIs, Middleware",
+    icon: <FaNodeJs className="text-[#c9a84c] text-2xl" />
   },
-  { 
-    name: "Express.js", 
-    percent: 90, 
-    subtitle: "Routing, Authentication, Security", 
-    icon: <SiExpress className="text-[#c9a84c] text-2xl" /> 
+  {
+    name: "Express.js",
+    percent: 90,
+    subtitle: "Routing, Authentication, Security",
+    icon: <SiExpress className="text-[#c9a84c] text-2xl" />
   },
-  { 
-    name: "MongoDB", 
-    percent: 85, 
-    subtitle: "Mongoose, Aggregation, CRUD Operations", 
-    icon: <SiMongodb className="text-[#c9a84c] text-2xl" /> 
+  {
+    name: "MongoDB",
+    percent: 85,
+    subtitle: "Mongoose, Aggregation, CRUD Operations",
+    icon: <SiMongodb className="text-[#c9a84c] text-2xl" />
   },
 ];
 
@@ -96,13 +96,12 @@ function SkillCard({ name, percent, subtitle, icon }) {
 
       {/* Progress Bar Section */}
       <div className="w-full h-1.5 bg-[#1f1f1f] rounded-full overflow-hidden mt-1">
-        {/* Framer Motion progress bar with viewport trigger */}
-        <motion.div 
+        <motion.div
           initial={{ width: 0 }}
           whileInView={{ width: `${percent}%` }}
           viewport={{ once: true }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="h-full bg-[#c9a84c] rounded-full shadow-[0_0_12px_rgba(201,168,76,0.4)]" 
+          className="h-full bg-[#c9a84c] rounded-full shadow-[0_0_12px_rgba(201,168,76,0.4)]"
         />
       </div>
     </div>
@@ -111,11 +110,12 @@ function SkillCard({ name, percent, subtitle, icon }) {
 
 export default function Skills() {
   return (
-    <section id="skills" className="min-h-screen bg-[#0e0e0e] pt-28 pb-16 px-4 relative overflow-hidden flex items-center justify-center">
+    /* Changed padding-top to a precise 30px to remove the massive layout gap below the fixed navbar */
+    <section id="skills" className="bg-[#0e0e0e] pt-7.5 pb-16 px-4 relative overflow-hidden flex justify-center scroll-mt-17.5">
       
       {/* SCREENSHOT GRID BACKGROUND EFFECT */}
-      <div 
-        className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+      <div
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage: `linear-gradient(#c9a84c 1px, transparent 1px), linear-gradient(to right, #c9a84c 1px, transparent 1px)`,
           backgroundSize: '24px 24px'
@@ -147,10 +147,10 @@ export default function Skills() {
         {/* SKILLS GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 animate__animated animate__fadeInUp">
           {skillsData.map((skill) => (
-            <SkillCard 
-              key={skill.name} 
-              name={skill.name} 
-              percent={skill.percent} 
+            <SkillCard
+              key={skill.name}
+              name={skill.name}
+              percent={skill.percent}
               subtitle={skill.subtitle}
               icon={skill.icon}
             />

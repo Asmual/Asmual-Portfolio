@@ -6,13 +6,13 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
-    title: "SunCart: Premium Summer Essentials eCommerce Store",
+    title: "ArtHub: Full-Stack Art Marketplace",
     description:
-      "A modern seasonal eCommerce store with secure Email/Google OAuth via BetterAuth. Features dynamic cart management and protected product layers in a premium dark responsive UI.",
-    image: "/images/SunCart.png",
-    tags: ["Next.js 15", "BetterAuth", "MongoDB", "Tailwind CSS", "DaisyUI", "Next/Image"],
-    github: "https://github.com/Asmual/Assignment-8",
-    demo: "https://assignment-8-woad-three.vercel.app/",
+      "A scalable full-stack art marketplace enabling artists to showcase and sell artwork. Features secure purchasing, Stripe payment integration, subscription management, and role-based dashboards for buyers, creators, and administrators.",
+    image: "/images/ArtHub.png",
+    tags: ["Next.js", "Better Auth", "JWT", "MongoDB", "Stripe", "Tailwind CSS"],
+    github: "https://github.com/Asmual/arthub-client",
+    demo: "https://arthub-three.vercel.app",
   },
   {
     title: "DocAppoint: Advanced Doctor Appointment & Healthcare Platform",
@@ -24,27 +24,38 @@ const projects = [
     demo: "https://assignment-9-eight-drab.vercel.app/",
   },
   {
-    title: "Influencer Products: Premium Responsive Gear Landing Page",
+    title: "SunCart: Premium Summer Essentials eCommerce Store",
     description:
-      "A sleek, highly optimized e-commerce landing page for creators. Features minimal modern hero layouts and pixel-perfect responsiveness leveraging fluid CSS grid structures.",
-    image: "/images/Influencer Product.png",
-    tags: ["HTML5", "CSS3", "Flexbox", "CSS Grid", "Responsive Web Design"],
-    github: "https://github.com/Asmual/Module_10-Practice-Responsive-Website",
-    demo: "https://asmual.github.io/Module_10-Practice-Responsive-Website",
+      "A modern seasonal eCommerce store with secure Email/Google OAuth via BetterAuth. Features dynamic cart management and protected product layers in a premium dark responsive UI.",
+    image: "/images/SunCart.png",
+    tags: ["Next.js 15", "BetterAuth", "MongoDB", "Tailwind CSS", "DaisyUI", "Next/Image"],
+    github: "https://github.com/Asmual/Assignment-8",
+    demo: "https://assignment-8-woad-three.vercel.app/",
   },
 ];
 
 export default function Projects() {
   return (
-    <section className="relative bg-[#0e0e0e] text-white py-10 overflow-hidden">
+    <section className="relative bg-[#0e0e0e] text-white py-16 overflow-hidden">
+      
+      {/* Golden Grid Background Effect */}
+      <div
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        style={{
+          backgroundImage: `linear-gradient(#c9a84c 1px, transparent 1px), linear-gradient(to right, #c9a84c 1px, transparent 1px)`,
+          backgroundSize: '24px 24px'
+        }}
+      />
+
       {/* Decorative background elements */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#c9a84c]/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#c9a84c]/3 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
         {/* Section Title Header */}
         <div className="text-center mb-16">
-          <h2 
+          <h2
             className="text-4xl sm:text-5xl font-bold bg-linear-to-r from-[#FFE0A3] via-[#c9a84c] to-[#9E7231] bg-clip-text text-transparent mb-3 font-serif"
           >
             Projects
@@ -60,10 +71,10 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group relative bg-[#121316] border border-gray-800/60 hover:border-[#c9a84c]/40 rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_40px_rgba(201,168,76,0.05)] transition-all duration-300 flex flex-col h-full"
+              className="group relative bg-[#121316]/60 backdrop-blur-md border border-gray-800/60 hover:border-[#c9a84c]/40 rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_40px_rgba(201,168,76,0.05)] transition-all duration-300 flex flex-col h-full"
             >
               {/* Project Image */}
-              <div className="relative w-full h-40 bg-[#1a1b20] overflow-hidden rounded-t-2xl">
+              <div className="relative w-full h-40 bg-[#1a1b20]/50 overflow-hidden rounded-t-2xl">
                 <div className="absolute inset-0 bg-linear-to-t from-[#121316] via-transparent to-transparent z-10 opacity-60" />
                 <Image
                   src={project.image}

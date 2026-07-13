@@ -14,7 +14,6 @@ const navLinks = [
   { label: "Skills", href: "/#skills", id: "skills" },
   { label: "About", href: "/#about", id: "about" },
   { label: "Services", href: "/#services", id: "services" },
-  { label: "Blogs", href: "/#blogs", id: "blogs" },
   { label: "Contact", href: "/#contact", id: "contact" },
 ];
 
@@ -122,7 +121,7 @@ export default function Navbar() {
           <Link href="/#home" onClick={(e) => handleNavLinkClick(e, { id: "home" })} className="flex items-center gap-3">
             <div className="relative w-9 h-9">
               <Image
-                src="/images/AsmualLogo.png"
+                src="/images/MyLogo.png"
                 alt="Asmual Logo"
                 fill
                 sizes="36px"
