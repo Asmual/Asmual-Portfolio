@@ -1,4 +1,5 @@
 "use client";
+
 import { motion } from "framer-motion";
 import {
   FaReact,
@@ -11,17 +12,14 @@ import {
   SiTailwindcss,
   SiNextdotjs,
   SiExpress,
-  SiMongodb
+  SiMongodb,
+  SiTypescript,
+  SiPrisma,
+  SiPostgresql
 } from "react-icons/si";
 import "animate.css";
 
 const skillsData = [
-  {
-    name: "React",
-    percent: 95,
-    subtitle: "Hooks, Context, Redux",
-    icon: <FaReact className="text-[#c9a84c] text-2xl" />
-  },
   {
     name: "JavaScript",
     percent: 92,
@@ -29,26 +27,20 @@ const skillsData = [
     icon: <FaJsSquare className="text-[#c9a84c] text-2xl" />
   },
   {
-    name: "HTML5",
-    percent: 90,
-    subtitle: "Semantic HTML, Accessibility",
-    icon: <FaHtml5 className="text-[#c9a84c] text-2xl" />
+    name: "TypeScript",
+    percent: 70,
+    subtitle: "Type Safety, Interfaces, Generics",
+    icon: <SiTypescript className="text-[#c9a84c] text-2xl" />
   },
   {
-    name: "CSS3",
-    percent: 88,
-    subtitle: "Flexbox, Grid, Animations",
-    icon: <FaCss3Alt className="text-[#c9a84c] text-2xl" />
-  },
-  {
-    name: "Tailwind CSS",
-    percent: 85,
-    subtitle: "Utility-first CSS, Responsive Design",
-    icon: <SiTailwindcss className="text-[#c9a84c] text-2xl" />
+    name: "React",
+    percent: 95,
+    subtitle: "Hooks, Context, Redux",
+    icon: <FaReact className="text-[#c9a84c] text-2xl" />
   },
   {
     name: "Next.js",
-    percent: 80,
+    percent: 85,
     subtitle: "SSR, SSG, App Router",
     icon: <SiNextdotjs className="text-[#c9a84c] text-2xl" />
   },
@@ -66,9 +58,39 @@ const skillsData = [
   },
   {
     name: "MongoDB",
-    percent: 85,
-    subtitle: "Mongoose, Aggregation, CRUD Operations",
+    percent: 90,
+    subtitle: "Mongoose, Aggregation, CRUD",
     icon: <SiMongodb className="text-[#c9a84c] text-2xl" />
+  },
+  {
+    name: "PostgreSQL",
+    percent: 75,
+    subtitle: "Relational DB, SQL Queries, Indexing",
+    icon: <SiPostgresql className="text-[#c9a84c] text-2xl" />
+  },
+  {
+    name: "Prisma",
+    percent: 70,
+    subtitle: "ORM, Schema Design, Migrations",
+    icon: <SiPrisma className="text-[#c9a84c] text-2xl" />
+  },
+  {
+    name: "Tailwind CSS",
+    percent: 88,
+    subtitle: "Utility-first CSS, Responsive Design",
+    icon: <SiTailwindcss className="text-[#c9a84c] text-2xl" />
+  },
+  {
+    name: "HTML5",
+    percent: 90,
+    subtitle: "Semantic HTML, Accessibility",
+    icon: <FaHtml5 className="text-[#c9a84c] text-2xl" />
+  },
+  {
+    name: "CSS3",
+    percent: 88,
+    subtitle: "Flexbox, Grid, Animations",
+    icon: <FaCss3Alt className="text-[#c9a84c] text-2xl" />
   },
 ];
 
@@ -110,17 +132,7 @@ function SkillCard({ name, percent, subtitle, icon }) {
 
 export default function Skills() {
   return (
-    /* Changed padding-top to a precise 30px to remove the massive layout gap below the fixed navbar */
     <section id="skills" className="bg-[#0e0e0e] pt-7.5 pb-16 px-4 relative overflow-hidden flex justify-center scroll-mt-17.5">
-      
-      {/* SCREENSHOT GRID BACKGROUND EFFECT */}
-      <div
-        className="absolute inset-0 opacity-[0.03] pointer-events-none"
-        style={{
-          backgroundImage: `linear-gradient(#c9a84c 1px, transparent 1px), linear-gradient(to right, #c9a84c 1px, transparent 1px)`,
-          backgroundSize: '24px 24px'
-        }}
-      />
       
       {/* Subtle Ambient Glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-125 h-125 rounded-full bg-[#c9a84c]/5 blur-[120px] pointer-events-none" />

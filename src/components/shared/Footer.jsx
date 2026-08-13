@@ -146,10 +146,10 @@ const Footer = () => {
               <p className="text-xs text-gray-500">
                 Authorized access?{" "}
                 <Link
-                  href="/login"
+                  href="/signup"
                   className="text-gray-400 underline underline-offset-2 hover:text-[#c9a84c] transition-colors"
                 >
-                  Sign in here
+                  Signup here
                 </Link>
               </p>
             </div>

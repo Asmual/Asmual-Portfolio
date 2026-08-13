@@ -53,7 +53,7 @@ export default function Projects() {
         
         {/* Section Title Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#FFE0A3] via-[#c9a84c] to-[#9E7231] bg-clip-text text-transparent mb-3 font-serif">
+          <h2 className="text-4xl sm:text-5xl font-bold bg-linear-to-r from-[#FFE0A3] via-[#c9a84c] to-[#9E7231] bg-clip-text text-transparent mb-3 font-serif">
             Projects
           </h2>
           <p className="text-gray-500 text-xs sm:text-sm tracking-widest uppercase">
@@ -70,7 +70,7 @@ export default function Projects() {
               className="group relative bg-[#121316] border border-gray-800/80 hover:border-[#c9a84c]/50 rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.4)] hover:shadow-[0_15px_40px_rgba(201,168,76,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
             >
               {/* Full-bleed Edge-to-Edge Image (No Padding, No Zoom on Hover) */}
-              <div className="relative w-full aspect-[16/10] bg-[#1a1b20] overflow-hidden">
+              <div className="relative w-full aspect-16/10 bg-[#1a1b20] overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -109,7 +109,7 @@ export default function Projects() {
                   {/* Primary Focus: View Details Page Button */}
                   <Link
                     href={project.detailsUrl}
-                    className="w-full flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-semibold bg-gradient-to-r from-[#c9a84c] to-[#9E7231] text-[#0e0e0e] rounded-lg hover:from-[#FFE0A3] hover:to-[#c9a84c] shadow-[0_4px_15px_rgba(201,168,76,0.15)] hover:shadow-[0_6px_20px_rgba(201,168,76,0.25)] transition-all duration-200"
+                    className="w-full flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-semibold bg-linear-to-r from-[#c9a84c] to-[#9E7231] text-[#0e0e0e] rounded-lg hover:from-[#FFE0A3] hover:to-[#c9a84c] shadow-[0_4px_15px_rgba(201,168,76,0.15)] hover:shadow-[0_6px_20px_rgba(201,168,76,0.25)] transition-all duration-200"
                   >
                     <span>View Details</span>
                     <FaArrowRight className="text-[10px]" />

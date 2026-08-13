@@ -12,5 +12,5 @@ git push -u origin main
 
 
 git add .
-git commit -m "add dynamic project details page with compact image slider and action links"
+git commit -m "Update Skills Section"
 git push
