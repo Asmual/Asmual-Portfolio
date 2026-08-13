@@ -12,5 +12,5 @@ git push -u origin main
 
 
 git add .
-git commit -m "feat(footer): update UI design and add discreet login link"
+git commit -m "add dynamic project details page with compact image slider and action links"
 git push
