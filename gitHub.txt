@@ -12,5 +12,5 @@ git push -u origin main
 
 
 git add .
-git commit -m "Update Navbar-Removed Login and Logout Button"
+git commit -m "feat(footer): update UI design and add discreet login link"
 git push
