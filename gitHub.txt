@@ -12,5 +12,5 @@ git push -u origin main
 
 
 git add .
-git commit -m "FavIcon, Footer, Header Logo Changes,Fixing some errors" "
-git branch -M main
+git commit -m "Change Hero Image"
+git push

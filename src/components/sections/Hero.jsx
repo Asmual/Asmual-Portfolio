@@ -204,8 +204,8 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-linear-to-t from-[#0e0e0e]/60 via-transparent to-transparent z-10" />
 
                 <Image
-                  src="/images/Asmua-lHeroPic.png"
-                  alt="Asmual Obaidul Hoque"
+                  src="/images/asmual-hero.png"
+                  alt="Asmual Obaidul Hoque Hero Picture"
                   fill
                   className="object-cover object-top"
                   priority
